@@ -4,32 +4,29 @@
     <title>Projekt</title>
 	<meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGA5eBZWV5ik7o6yGOsr-R0Qvj07Lj4oU&callback=initMap"></script>
 </head>
 <body>
 
     <div class="mainContainer" data-ng-app="RavensApp">
-        <h1>Nagłówek!</h1>
+        <h1>Angular excercise!</h1>
         <div data-ng-controller="ravensCtrl">
-
-
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Firma</th>
-                        <th>ogloszenie</th>
-                        <th>adres</th>
-                        <th>logo</th>
+                        <th>Ogłoszenie</th>
+                        <th>Adres</th>
+                        <th>Logo</th>
                     </tr>
                 </thead>
                 <tbody>
-                <tr data-ng-repeat="player in players">
-                    <td>{{player.firma}}</td>
-                    <td>{{player.ogloszenie}}</td>
-                    <td>{{player.adres}}</td>
-                    <td><img src={{player.logo}}></td>
+                <tr data-ng-repeat="evid in evidence">
+                    <td>{{evid.firm}}</td>
+                    <td>{{evid.ad}}</td>
+                    <td>{{evid.address}}</td>
+                    <td><img src={{evid.logo}}></td>
                 </tr>
                 </tbody>
             </table>
@@ -37,9 +34,9 @@
         <div id="map"></div>
 
     </div>
-	
-    <script src="script/controller.js"></script>
-    <script src="script/geo.js"></script>
+    <script src="script/ravensService.js"></script>
+    <script src="script/ravensCtrl.js"></script>
+
     
 
 </body>

@@ -1,6 +1,15 @@
-var geocoder;
-var map;
-var marker;
+angular.module("RavensApp",[]).service("ravensService", function ($http, $q){
+    var deferred = $q.defer();
+    $http.get('data/data.json').then(function (data){
+        deferred.resolve(data);
+    });
+
+    this.getPlayers = function (){
+        return deferred.promise;
+    }
+});
+
+
 function initMap() {
     geocoder = new google.maps.Geocoder();
     var latlng = new google.maps.LatLng(52.375599, 19.248047); //wycentrowanie na Polske
@@ -12,17 +21,16 @@ function initMap() {
 }
 
 function codeAddress(address, icons) {
-    console.log(address+" "+icons);
+    //console.log(address+" "+icons);
     geocoder.geocode( { 'address': address}, function(results, status) {
-        if (status == 'OK') {
-            map.setCenter(results[0].geometry.location);
-             marker = new google.maps.Marker({
+        if (status === 'OK') {
+            new google.maps.Marker({
                 map: map,
                 position: results[0].geometry.location,
                 icon: icons
             });
         } else {
-            alert('Nie znaleziono lokalizacji o podanym adresie. Błąd: ' + status);
+            //alert('Nie znaleziono lokalizacji o podanym adresie. Błąd: ' + status);
         }
     });
 }
