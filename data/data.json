@@ -1,0 +1,32 @@
+[
+  {
+    "firma": "Bright Coders' Factory",
+    "ogloszenie": "GO Developer",
+    "adres": "ul. Technologiczna 2, 45-837 Opole",
+    "logo": "https://nofluffjobs.com/upload/posting/Bright_Coders_Factory_20170405_092930.jpeg"
+  },
+  {
+    "firma": "Siili",
+    "ogloszenie": "Java Backend Developer",
+    "adres": "ul. Św. Antoniego 2/4, 50-073 Wrocław",
+    "logo": "https://nofluffjobs.com/upload/posting/Siili_20150611_152111.jpeg"
+  },
+  {
+    "firma": "3a.pl",
+    "ogloszenie": "PHP / Symfony Developer",
+    "adres": "ul. bł. Czesława 3/3, 44-100 Gliwice ",
+    "logo": "https://nofluffjobs.com/upload/posting/3a_pl_20170404_161956.png"
+  },
+  {
+    "firma": "Grid Dynamics",
+    "ogloszenie": "JAVA (distributed, scalable systems) Developer",
+    "adres": "Aleje 3 Maja 9, 30-062 Kraków",
+    "logo": "https://nofluffjobs.com/upload/posting/Grid_Dynamics_20170320_191004.jpeg"
+  },
+  {
+    "firma": "Starcounter AB",
+    "ogloszenie": "Enterprise Software Architect",
+    "adres": "ul. al. Grunwaldzka 186, 80-266 Gdańsk",
+    "logo": "https://nofluffjobs.com/upload/posting/Starcounter_AB_20170320_172528.png"
+  }
+]
