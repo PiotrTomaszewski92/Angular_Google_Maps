@@ -1,5 +1,6 @@
 angular.module("RavensApp",[]).service("ravensService", function ($http, $q){
     var deferred = $q.defer();
+    //var geocoder, map;
     $http.get('data/data.json').then(function (data){
         deferred.resolve(data);
     });
@@ -7,6 +8,7 @@ angular.module("RavensApp",[]).service("ravensService", function ($http, $q){
     this.getPlayers = function (){
         return deferred.promise;
     }
+
 });
 
 
@@ -34,5 +36,4 @@ function codeAddress(address, icons) {
         }
     });
 }
-
 
